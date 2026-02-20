@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "m6x11";
+  src: url("fuentes/m6x11plus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "m6x11", monospace;
+  font-size: 22px;
+  image-rendering: pixelated;
+  background-image: url("imagenes/balatroFondo1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
