@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Balatro</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/x-icon" href="Comod%253Fn.webp" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/" />
+    <script src="assets/js/color-modes.js"></script>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="cover.css" rel="stylesheet" />
+    <style>
+      .hover-gif {
+        content: url(balatro-jimboPNG.png);
+        transition: all 0.3 ease-in-out;
+      }
+      .hover-gif:hover {
+        content: url(balatro-jimbo.gif);
+      }
+      i {
+        color: white;
+        background-color: crimson;
+      }
+      body {
+        background-image: url("balatroFondo1PNG.png");
+        background-size: 100%;
+      }
+      main {
+        /*background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px crimson;*/
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      /* Tarjetas estilo gamer */
+      .card-balatro {
+        background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .card-balatro {
+        min-height: 200px;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /* Glow al pasar el mouse */
+      .card-balatro:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow:
+          0 0 20px crimson,
+          0 0 40px rgba(255, 0, 0, 0.5);
+      }
+
+      /* Títulos */
+      .card-balatro h4 {
+        color: #ff4d4d;
+        margin-bottom: 10px;
+      }
+
+      /* Texto */
+      .card-balatro p {
+        font-size: 18px;
+        color: #ddd;
+      }
+
+      /* Separación entre bloques */
+      .seccion {
+        margin-bottom: 40px;
+      }
+      .card-balatro {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false">
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true">
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Balatro</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="contenido.html">Contenido</a>
+            <a class="nav-link fw-bold py-1 px-0" href="referencias.html">Referencias</a>
+            <a class="nav-link fw-bold py-1 px-0" href="contactos.html">Contactos</a>
+          </nav>
+        </div>
+      </header>
+      <main class="px-0">
+        <div class="container-fluid px-4">
+          <div class="row text-white g-3">
+            <div class="col">
+              <div class="card-balatro text-center">
+                <h4>Comodines</h4>
+                <p>
+                  Los comodines son cartas especiales esenciales en la jugabilidad de Balatro. En lugar de venir en las
+                  Barajas y jugarse con las cartas normales, se obtienen comprándolos en la tienda, y ocasionalmente por
+                  otros medios, se quedan en las respectivas ranuras para comodines hasta que se vendan o que se
+                  destruyan. Por lo general se empieza con 5 espacios para comodines, pero se puede ganar o perder
+                  espacios en determinadas circunstancias. Los comodines poseen efectos únicos que pueden hacer
+                  sincronía con otros comodines que pueden ayudar a vencer a ciegas con apuestas iniciales muy altas.
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card-balatro text-center">
+                <h4>Barajas</h4>
+                <p>
+                  Las barajas tienen cartas de juego que son clave para formar manos de póker. Cada baraja tiene efectos
+                  distintos y se desbloquea de diferentes maneras. El jugador puede elegir qué baraja usar al comienzo
+                  de cada partida, así como también el Pozo.
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card-balatro text-center">
+                <h4>Pozos</h4>
+                <p>
+                  Hay 8 pozos en Balatro, que se vuelven cada vez más difíciles. Cada pozo nuevo aporta un modificador
+                  que se suma a los anteriores, por lo que es más difícil a medida que se sube de nivel. Son la
+                  representación de las dificulates de balatro y son independientes para cada baraja, es decir, solo se
+                  desbloquean para la baraja que se este jugando.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="container mt-4">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <iframe src="https://www.youtube.com/embed/9agt18c_V1U" allowfullscreen> </iframe>
+            </div>
+            <div class="col-md-6 text-start">
+              <h2>Balatro</h2>
+              <p>
+                Este juego mezcla cartas con mecánicas roguelike muy adictivas. Cada partida es diferente y puedes hacer
+                combos brutales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@balatrogame/video/7451656816242461984"
+          data-video-id="7451656816242461984"
+          style="max-width: 605px; min-width: 325px">
+          <section>
+            <a target="_blank" href="https://www.tiktok.com/@balatrogame">@balatrogame</a>
+          </section>
+        </blockquote>
+
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </main>
+      <footer class="mt-auto text-white-50">
+        <p>
+          <i class="fa fa-youtube-play" aria-hidden="true" color="red">YouTube</i>
+          <i class="fa fa-facebook" aria-hidden="true">Facebook</i>
+          <i class="fa fa-instagram" aria-hidden="true">Instagram</i>
+          <i class="fa fa-twitter" aria-hidden="true">Twitter</i>
+          <i class="fa fa-twitch" aria-hidden="true">Twitch</i>
+          <i class="fa fa-steam" aria-hidden="true">Steam</i>
+          <i class="fa fa-wikipedia-w" aria-hidden="true"
+            ><a href="https://es.wikipedia.org/wiki/Balatro">&nbsp;Wikipedia</a></i
+          >
+          <br />
+          <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
+          <a href="https://x.com/mdo" class="text-white">@mdo</a>.
+        </p>
+      </footer>
+    </div>
+    <script src="assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  </body>
+</html>
