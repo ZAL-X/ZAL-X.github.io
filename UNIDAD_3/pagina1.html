@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>FORMS</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+            crossorigin="anonymous" />
+
+        <!-- Optional theme -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+            integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+            crossorigin="anonymous" />
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script>
+            if(!confirm('Para acceder al sitio debes aceptar las cookies...')){
+                window.location.href = 'http://www.google.com.mx';
+            }
+        </script>
+        <h1>Formulario web</h1>
+
+        <form class="form-horizontal" method="post" id="frmBase">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Lo basico de un formulario</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="NOMBRES">Nombre completo</label>
+                    <div class="col-md-5">
+                        <input
+                            id="NOMBRES"
+                            name="NOMBRES"
+                            type="text"
+                            placeholder=""
+                            class="form-control input-md"
+                            required="" />
+                        <span class="help-block">Comenzando por los apellidos</span>
+                    </div>
+                </div>
+
+                <!-- Prepended text-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="TELÉLEFONO">Número de teléfono</label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">+52</span>
+                            <input
+                                id="TELÉLEFONO"
+                                name="TELÉLEFONO"
+                                class="form-control"
+                                placeholder="(123) 456 7890"
+                                type="text"
+                                required="" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appended Input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="CORREO">Correo Electrónico</label>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <input
+                                id="CORREO"
+                                name="CORREO"
+                                class="form-control"
+                                placeholder="No. matrícula"
+                                type="text"
+                                required="" />
+                            <span class="input-group-addon">@upslp.edu.mx</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="CONTRASEÑA">Contraseña</label>
+                    <div class="col-md-4">
+                        <input
+                            id="CONTRASEÑA"
+                            name="CONTRASEÑA"
+                            type="password"
+                            placeholder="password"
+                            class="form-control input-md"
+                            required="" />
+                        <span class="help-block">Usa al menos una mayúscula y un número</span>
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="DOMICILIO">Domicilio</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="DOMICILIO" name="DOMICILIO"></textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ENVIAR"></label>
+                    <div class="col-md-4">
+                        <button id="ENVIAR" onclick="mostrarDatos()" name="ENVIAR" class="btn btn-success">Enviar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <script>
+            document.body.style.backgroundColor = "gray";
+            //instruccion para modificar de manera dinamica el contenido de una etiqueta
+            //document.getElementsByTagName("h1").item(0).textContent = "UPSLP";
+            document.getElementById("frmBase").style.backgroundColor = "aqua";
+            function mostrarDatos(){
+                let objNombre = document.getElementById("NOMBRES");
+                //objnombre.value = "Universidad Politecnica de San Luis Potosi";
+                let objTelefono = document.getElementById("TELÉLEFONO");
+                let objCorreo = document.getElementById("CORREO");
+                let objPassword = document.getElementById("CONTRASEÑA");
+                let objDomicilio = document.getElementById("DOMICILIO");
+                
+                //Validar campos
+                const regexTelefono = "/^\d{6}$/";
+                const bandTelefono = validarFormato(objTelefono, regexTelefono); 
+                
+                //Visualizar en un alert
+                let strMensaje = ">>>Información capturada<<<\n"
+                strMensaje += "\n - Nombre: " + objNombre.value;
+                strMensaje += "\n - Teléfono: (+52) " + objTelefono.value;
+                strMensaje += "\n - Correo: " + objCorreo.value + "@upslp.edu.mx";
+                strMensaje += "\n - Contraseña: " + objPassword.value;
+                strMensaje += "\n - Domicilio: " + objDomicilio.value;
+                alert(strMensaje);
+            }
+        </script> 
+    </body>
+</html>

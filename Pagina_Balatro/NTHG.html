@@ -31,9 +31,9 @@
         background-size: 100%;
       }
       main {
-        /*background-color: rgba(255, 0, 0, 0.75);
+        background-color: rgba(255, 0, 0, 0.75);
         border-radius: 50px;
-        box-shadow: 10px 10px 10px crimson;*/
+        box-shadow: 10px 10px 10px crimson;
       }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -83,19 +83,19 @@
         -webkit-overflow-scrolling: touch;
       }
       .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
+        --bd-violet-bg: crimson;
         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
         --bs-btn-bg: var(--bd-violet-bg);
         --bs-btn-border-color: var(--bd-violet-bg);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-hover-bg: crimson;
+        --bs-btn-hover-border-color: crimson;
         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: crimson;
+        --bs-btn-active-border-color: crimson;
       }
       .bd-mode-toggle {
         z-index: 1500;
@@ -106,50 +106,6 @@
       }
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
-      }
-      /* Tarjetas estilo gamer */
-      .card-balatro {
-        background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
-        border-radius: 15px;
-        padding: 20px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .card-balatro {
-        min-height: 200px;
-        min-width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      /* Glow al pasar el mouse */
-      .card-balatro:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow:
-          0 0 20px crimson,
-          0 0 40px rgba(255, 0, 0, 0.5);
-      }
-
-      /* Títulos */
-      .card-balatro h4 {
-        color: #ff4d4d;
-        margin-bottom: 10px;
-      }
-
-      /* Texto */
-      .card-balatro p {
-        font-size: 18px;
-        color: #ddd;
-      }
-
-      /* Separación entre bloques */
-      .seccion {
-        margin-bottom: 40px;
-      }
-      .card-balatro {
-        width: 100%;
       }
     </style>
   </head>
@@ -236,81 +192,48 @@
     </div>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Balatro</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Inicio</a>
-            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="contenido.html">Contenido</a>
-            <a class="nav-link fw-bold py-1 px-0" href="referencias.html">Referencias</a>
-            <a class="nav-link fw-bold py-1 px-0" href="contactos.html">Contactos</a>
-          </nav>
-        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded-4 px-4 py-2">
+          <!-- Logo o título -->
+          <a class="navbar-brand fw-bold" href="#">Balatro</a>
+
+          <!-- Botón responsive (celular) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div class="collapse navbar-collapse justify-content-center" id="menu">
+            <ul class="navbar-nav gap-4 text-center">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contenido.html">Contenido</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="referencias.html">Referencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contactos.html">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
-      <main class="px-0">
-        <br />
-        <div class="container-fluid px-4">
-          <div class="row text-white g-3">
-            <div class="col">
-              <div class="card-balatro text-center">
-                <h4>Comodines</h4>
-                <p>
-                  Los comodines son cartas especiales esenciales en la jugabilidad de Balatro. En lugar de venir en las
-                  Barajas y jugarse con las cartas normales, se obtienen comprándolos en la tienda, y ocasionalmente por
-                  otros medios, se quedan en las respectivas ranuras para comodines hasta que se vendan o que se
-                  destruyan. Por lo general se empieza con 5 espacios para comodines, pero se puede ganar o perder
-                  espacios en determinadas circunstancias. Los comodines poseen efectos únicos que pueden hacer
-                  sincronía con otros comodines que pueden ayudar a vencer a ciegas con apuestas iniciales muy altas.
-                </p>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card-balatro text-center">
-                <h4>Barajas</h4>
-                <p>
-                  Las barajas tienen cartas de juego que son clave para formar manos de póker. Cada baraja tiene efectos
-                  distintos y se desbloquea de diferentes maneras. El jugador puede elegir qué baraja usar al comienzo
-                  de cada partida, así como también el Pozo.
-                </p>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card-balatro text-center">
-                <h4>Pozos</h4>
-                <p>
-                  Hay 8 pozos en Balatro, que se vuelven cada vez más difíciles. Cada pozo nuevo aporta un modificador
-                  que se suma a los anteriores, por lo que es más difícil a medida que se sube de nivel. Son la
-                  representación de las dificulates de balatro y son independientes para cada baraja, es decir, solo se
-                  desbloquean para la baraja que se este jugando.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="container mt-4">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <h2>Balatro</h2>
-              <iframe src="https://www.youtube.com/embed/9agt18c_V1U" allowfullscreen> </iframe>
-              <p>Trailer del juego en Youtube</p>
-            </div>
-            <div class="col-md-6 text-start"></div>
-          </div>
-        </div>
-        <br /><br />
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@balatrogame/video/7451656816242461984"
-          data-video-id="7451656816242461984"
-          style="max-width: 605px; min-width: 325px">
-          <section>
-            <a target="_blank" href="https://www.tiktok.com/@balatrogame">@balatrogame</a>
-          </section>
-        </blockquote>
-
-        <script async src="https://www.tiktok.com/embed.js"></script>
+      <div class="text-center">
+        <a href="https://getbootstrap.com/docs/5.3/examples/carousel/#"><img src="Balatro%20logo-new.png" alt="Portada" class="img-fluid" width="800" /></a>  
+      </div>
+      <img class="hover-gif d-block mx-auto" src="balatro-jimboPNG.png" width="200" />
+      <br />
+      <main class="px-3">
+        <h1>Balatro</h1>
+        <p class="lead">
+          Balatro es un juego roguelike desarrollado por LocalThunk y publicado por Playstack el 20 de Febrero de 2024
+          en Steam, Playstation, Xbox, Switch. Y el 23 de septiembre fue publicado en telefono.
+        </p>
+        <p class="lead">
+          <img class="d-block mx-auto" src="balatro-mult.gif" alt="Puntuation" width="200" />
+        </p>
       </main>
       <footer class="mt-auto text-white-50">
         <p>

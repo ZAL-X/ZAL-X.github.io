@@ -14,7 +14,40 @@
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="cover.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
+      .carousel,
+      .carousel-inner,
+      .carousel-item {
+        height: 50vh;
+        width: 100vh;
+      }
+      .carousel-item {
+        position: relative;
+      }
+      .mi-carrusel {
+        border: 4px solid crimson;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0 0 20px crimson;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .carousel-item p {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .carousel-item img {
+        height: 300px;
+        object-fit: contain; /* o 'cover' si quieres que llene todo */
+      }
       .hover-gif {
         content: url(balatro-jimboPNG.png);
         transition: all 0.3 ease-in-out;
@@ -27,10 +60,11 @@
         background-color: crimson;
       }
       body {
-        background-image: url("balatroFondo1PNG.png");
+        background-image: url("BalatroBGG.gif");
         background-size: 100%;
       }
       main {
+        width: 500px;
         background-color: rgba(255, 0, 0, 0.75);
         border-radius: 50px;
         box-shadow: 10px 10px 10px crimson;
@@ -192,45 +226,115 @@
     </div>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0"><img src="Comod%253Fn.webp" alt="BalatroICON" width="50" />Balatro</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Inicio</a>
-            <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="contenido.html">Contenido</a>
-            <a class="nav-link fw-bold py-1 px-0" href="referencias.html">Referencias</a>
-            <a class="nav-link fw-bold py-1 px-0" href="contactos.html">Contactos</a>
-          </nav>
-        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded-4 px-4 py-2">
+          <!-- Logo o título -->
+          <a class="navbar-brand fw-bold" href="#">Balatro</a>
+
+          <!-- Botón responsive (celular) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div class="collapse navbar-collapse justify-content-center" id="menu">
+            <ul class="navbar-nav gap-4 text-center">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contenido.html">Contenido</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="referencias.html">Referencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contactos.html">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
-      <img class="hover-gif d-block mx-auto" src="balatro-jimboPNG.png" width="200"/>
-      <main class="px-3">
-        <h1>Balatro</h1>
-        <p class="lead">
-          Balatro es un juego roguelike desarrollado por LocalThunk y publicado por Playstack el 20 de Febrero de 2024
-          en Steam, Playstation, Xbox, Switch. Y el 23 de septiembre fue publicado en telefono.
-        </p>
-        <p class="lead">
-          <img class="d-block mx-auto" src="balatro-mult.gif" alt="Puntuation" width="200"/>
-          
-        </p>
-      </main>
+      <div class="text-center">
+        <img src="Balatro%20logo-new.png" alt="Portada" class="img-fluid balatro-1" />
+      </div>
+      <main class="px-3"></main>
+      <!-- CARRUSEL ----------------------------------------------->
+      <div id="carouselExample" class="carousel slide vh-100 mi-carrusel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- IMAGEN 1 -->
+          <div class="carousel-item active">
+            <img src="Comod%253Fn.webp" class="d-block mx-auto img-fluid" alt="Imagen 1" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel mauris ac neque pretium consectetur.
+              Nunc sollicitudin hendrerit neque, eget bibendum tellus mollis et. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Sed a mattis massa, a cursus enim. Nulla facilisi.
+              Phasellus vitae tincidunt nibh, dignissim ultricies nisi. Sed euismod, diam ullamcorper aliquet efficitur,
+              tellus mi porttitor ex, et vulputate augue nunc a felis. Curabitur at mauris ipsum. Nunc sed vestibulum
+              tellus, sit amet maximus quam. In orci eros, consectetur a tortor a, tempus pretium nisi. Aenean elementum
+              ornare dui, sed consectetur leo congue eu. Ut quis diam sed elit cursus tempor. Curabitur lorem velit,
+              ultrices a cursus ultrices, rhoncus nec libero. Praesent et gravida erat.
+            </p>
+          </div>
+          <!-- IMAGEN 2 -->
+          <div class="carousel-item">
+            <img src="Baraja_roja.webp" class="d-block mx-auto img-fluid" alt="Imagen 2" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel mauris ac neque pretium consectetur.
+              Nunc sollicitudin hendrerit neque, eget bibendum tellus mollis et. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Sed a mattis massa, a cursus enim. Nulla facilisi.
+              Phasellus vitae tincidunt nibh, dignissim ultricies nisi. Sed euismod, diam ullamcorper aliquet efficitur,
+              tellus mi porttitor ex, et vulputate augue nunc a felis. Curabitur at mauris ipsum. Nunc sed vestibulum
+              tellus, sit amet maximus quam. In orci eros, consectetur a tortor a, tempus pretium nisi. Aenean elementum
+              ornare dui, sed consectetur leo congue eu. Ut quis diam sed elit cursus tempor. Curabitur lorem velit,
+              ultrices a cursus ultrices, rhoncus nec libero. Praesent et gravida erat.
+            </p>
+          </div>
+          <!-- IMAGEN 3 -->
+          <div class="carousel-item">
+            <img src="Pozo_blanco.webp" class="d-block mx-auto img-fluid" alt="Imagen 3" width="1000" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel mauris ac neque pretium consectetur.
+              Nunc sollicitudin hendrerit neque, eget bibendum tellus mollis et. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Sed a mattis massa, a cursus enim. Nulla facilisi.
+              Phasellus vitae tincidunt nibh, dignissim ultricies nisi. Sed euismod, diam ullamcorper aliquet efficitur,
+              tellus mi porttitor ex, et vulputate augue nunc a felis. Curabitur at mauris ipsum. Nunc sed vestibulum
+              tellus, sit amet maximus quam. In orci eros, consectetur a tortor a, tempus pretium nisi. Aenean elementum
+              ornare dui, sed consectetur leo congue eu. Ut quis diam sed elit cursus tempor. Curabitur lorem velit,
+              ultrices a cursus ultrices, rhoncus nec libero. Praesent et gravida erat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botón anterior -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <!-- Botón siguiente -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
       <footer class="mt-auto text-white-50">
         <p>
-          <i class="fa fa-youtube-play" aria-hidden="true" color="red">YouTube</i>
-          <i class="fa fa-facebook" aria-hidden="true">Facebook</i>
-          <i class="fa fa-instagram" aria-hidden="true">Instagram</i>
-          <i class="fa fa-twitter" aria-hidden="true">Twitter</i>
+          <i class="fa fa-youtube-play" aria-hidden="true" color="red">
+            <a href="https://www.youtube.com/@LocalThunk">YouTube</a>
+          </i>
+          <i class="fa fa-twitter" aria-hidden="true">
+            <a href="https://x.com/BalatroGame">Twitter</a>
+          </i>
           <i class="fa fa-twitch" aria-hidden="true">Twitch</i>
           <i class="fa fa-steam" aria-hidden="true">Steam</i>
-          <i class="fa fa-wikipedia-w" aria-hidden="true"
-            ><a href="https://es.wikipedia.org/wiki/Balatro">&nbsp;Wikipedia</a></i
-          >
+          <i class="fa fa-wikipedia-w" aria-hidden="true">
+            <a href="https://es.wikipedia.org/wiki/Balatro">Wikipedia</a>
+          </i>
           <br />
           <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
           <a href="https://x.com/mdo" class="text-white">@mdo</a>.
         </p>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   </body>
 </html>

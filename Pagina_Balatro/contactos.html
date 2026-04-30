@@ -15,6 +15,38 @@
         <meta name="theme-color" content="#712cf9" />
         <link href="cover.css" rel="stylesheet" />
         <style>
+                        .icono-img {
+                            width: 50px;
+                            height:65px;
+                            margin-right: 8px;
+                            vertical-align: middle;
+                            filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+                        }
+
+                        .info-academica p {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                        }
+
+                        .info-academica {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            text-align: left;
+                        }
+
+                        .info-academica p {
+                            margin: 5px 0;
+                            padding: 5px 10px;
+                            background: rgba(0,0,0,0.4);
+                            border-radius: 8px;
+                        }
+
+                        .info-academica i {
+                            margin-right: 8px;
+                            color: #ffd700;
+                        }
+
                         .hover-gif {
                             content: url(balatro-jimboPNG.png);
                             transition: all 0.3 ease-in-out;
@@ -254,24 +286,42 @@
                 </div>
             </header>
             <main class="px-3">
-                    <div class="credencial">
-                        <img src="Peluche_Jimbo.jpg" alt="Jimbo" width="100" />
+                <div class="credencial">
+                    <img src="Peluche_Jimbo.jpg" alt="Jimbo" width="100" />
 
-                        <h3>Isaac Alejandro</h3>
-                        <p>Medina Díaz de León</p>
+                    <h3>Isaac Alejandro</h3>
+                    <p>Medina Díaz de León</p>
 
-                        <div class="badge-id">Matrícula: 185834</div>
+                    <div class="info-academica">
+                        <p>
+                            <img src="Scholar.png" class="icono-img" alt="Carrera" />
+                            Carrera: ITI
+                        </p>
+
+                        <p>
+                            <img src="Blackboard.png" class="icono-img" alt="Semestre" />
+                            Semestre: 4to
+                        </p>
+                        <P>
+                            <img src="Driver's_License.png" class="icono-img" alt="Semestre" />
+                            Matrícula: 185834
+                        </P>
                     </div>
-                </main>
+                </div>
+            </main>
             <footer class="mt-auto text-white-50">
                 <p>
-                    <i class="fa fa-youtube-play" aria-hidden="true" color="red">YouTube</i>
-                    <i class="fa fa-facebook" aria-hidden="true">Facebook</i>
-                    <i class="fa fa-instagram" aria-hidden="true">Instagram</i>
-                    <i class="fa fa-twitter" aria-hidden="true">Twitter</i>
+                    <i class="fa fa-youtube-play" aria-hidden="true" color="red">
+                        <a href="https://www.youtube.com/@LocalThunk">YouTube</a>
+                    </i>
+                    <i class="fa fa-twitter" aria-hidden="true">
+                        <a href="https://x.com/BalatroGame">Twitter</a>
+                    </i>
                     <i class="fa fa-twitch" aria-hidden="true">Twitch</i>
                     <i class="fa fa-steam" aria-hidden="true">Steam</i>
-                    <i class="fa fa-wikipedia-w" aria-hidden="true">Wikipedia</i>
+                    <i class="fa fa-wikipedia-w" aria-hidden="true">
+                        <a href="https://es.wikipedia.org/wiki/Balatro">Wikipedia</a>
+                    </i>
                     <br />
                     <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
                     <a href="https://x.com/mdo" class="text-white">@mdo</a>.
