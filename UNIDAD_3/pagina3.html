@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Formularios Web</title>
+        <!-- Latest compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+            crossorigin="anonymous" />
+
+        <!-- Optional theme -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+            integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+            crossorigin="anonymous" />
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            document.body.style
+            src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script>
+            let numIntentos = 0;
+            let valSecreto = Math.floor(Math.random{} * 1000);
+            let valClave;
+            let bandContinuar = false;
+            do{
+                valClave = prompt("> Adivina el número: peude ser en el rango: [0-1000] y llevas " + numIntentos + "intentos...");
+                if(valClave > valSecreto) { alert(" -> INCORRECTO!!! [El valor del número secreto es menor...]"); numIntentos++;}
+                else if(valClave < valSecreto) { alert(" -> INCORRECTO!!! [El valor del número secreto es mayor... (" + numIntentos+ ")]"; }
+                else alert(" -> CORRECTO!!! (Te tomo "+ numIntentos +"intentos para adivinarlo)"); }
+            }while(bandContinuar);
+        </script>
+        <h1>Formularios Web</h1>
+        <form class="form-horizontal" method="get" id="frmBase">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Objetos básicos de un formulario</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Nombre completo</label>
+                    <div class="col-md-5">
+                        <input
+                            id="NOMBRES"
+                            name="NOMBRES"
+                            type="text"
+                            placeholder=""
+                            class="form-control input-md"
+                            required="" />
+                        <span class="help-block">Comenzando por los apellidos</span>
+                    </div>
+                </div>
+
+                <!-- Prepended text-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="prependedtext">Número de teléfono</label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">+52</span>
+                            <input
+                                id="TELÉLEFONO"
+                                name="TELÉLEFONO"
+                                class="form-control"
+                                placeholder="(123) 456 7890"
+                                type="text"
+                                required="" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="CORREO">Correo Electrónico</label>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <input
+                                id="CORREO"
+                                name="CORREO"
+                                class="form-control"
+                                placeholder="No. matrícula"
+                                type="text"
+                                required="" />
+                            <span class="input-group-addon">@upslp.edu.mx</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Appended Input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="CONTRASEÑA">Contraseña</label>
+                    <div class="col-md-4">
+                        <input
+                            id="CONTRASEÑA"
+                            name="CONTRASEÑA"
+                            type="password"
+                            placeholder="password"
+                            class="form-control input-md"
+                            required="" />
+                        <span class="help-block">Usa al menos una mayúscula y un número</span>
+                    </div>
+                </div>
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="DOMICILIO">Domicilio</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="DOMICILIO" name="DOMICILIO"></textarea>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4">
+                        <button id="singlebutton" onclick="mostrarDatos()" name="btnEnviar" class="btn btn-primary">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!--Calcular el area de figuras-->
+        <fieldset onmouseover="ratonIn(this)" onmouseout="ratonOut(this)">
+            <legend>Figuras</legend>
+            <label>Selecciona la figura</label>
+            <select id="tipoFigura">
+                <option value="0">Opciones</option>
+                <option value="1">Triangulo</option>
+                <option value="2">Cuadrado</option>
+                <option value="3">Circulo</option>
+            </select>
+            <br>
+            <label>Dame el valor del dato:</label>
+            <input type="number" id="valorDato" placeholder="Valor"><br>
+            <input type="button" value="Calcular" onclick="calcular()"> <br>
+            <label>Resultado:</label>
+            <input type="text" placeholder="Resultado" readonly id="valorResultado">
+        </fieldset>
+        <script>
+            document.body.style.backgroundColor = 'red';
+            /*
+             * Intrucciones para modificar de manera dinamica el contenido de una etiqueta
+             * document.getElementsByTagName("h1").item(0).texContent = 'UPSLP';
+            */
+            document.getElementById("frmBase").style.backgroundColor = 'pink';
+            function mostrarDatos() {
+                let objNombre = document.getElementById("txtNombre");     //Solo texto, acentos y espacio
+                let objTelefono = document.getElementById('txtTelefono'); // (###) ###-####
+                let objCorreo = document.getElementById('txtCorreo');     // Numero de 6 digitos
+                let objPassword = document.getElementById('txtPassword'); // 8-10 simbolos (alfanumerico y especial)
+                let objDomicilio = document.getElementById('txtDomicilio');
+                //validar campos
+                let regexNombre = /[a-z áéíóú\ ]+/gi;
+                let regexTelefono = /\([0-9]{3}\)\ [0-9]{3}\ [0-9]{4}/g;
+                let regexCorreo = /\d{6}/g;
+                let regexPassword = /[a-z@#$%&]{10,20}/g;
+                let bandNombre = (regexNombre.exec(objNombre.value) == objNombre.value);
+                let bandTelefono = (regexTelefono.exec(objTelefono.value) == objTelefono.value);
+                let bandCorreo = (regexCorreo.exec(objCorreo.value) == objCorreo.value);
+                let bandPassword = (regexPassword.exec(objPassword.value) == objPassword.value);
+                alert('Resultado de la validacion: \n -> Nombre: ${bandNombre}
+                    \n -> Telfono: $(bandTelefono})
+                    \n -> Correo: $(badnCorreo})
+                    \n -> Password: $(bandPassword}');
+                //visualizar en un Alert
+                let strMensaje = ">>>Informacion capturada<<<";
+                strMensaje += "\n - Nombre: " + objNombre.value;
+                strMensaje += "\n - Telefono: (+52)" + objTelefono.value;
+                strMensaje += "\n - Correo: " + objCorreo.value + "@upslp.edu.mx";
+                strMensaje += "\n - Password: " + objPassword.value;
+                strMensaje += "\n - Domicilio: " + objDomicilio.value;
+                //alert(strMensaje);
+            }
+        </script>
+        <script>
+            //funcion
+            function ratonIn(element){
+                element.style.color = "#ad42f5";
+                element.style.backgroundColor = "#4287f5";
+            }
+            //funcion
+            function ratonOut(element){
+                element.style.color = "#000000";
+                element.style.backgroundColor = "#ffffff";
+            }
+            //funcion
+            function calcula(){
+                let tipoFigura = document.getElementById("tipoFigura").value;
+                tipoFigura = parseInt(tipoFigura,10);
+                console.log(' > Tipo figura: ' + tipoFigura);
+                let valorDato = document.getElementById("valorDato").value;
+                console.log(' > Valor dato: ' + valorDato);
+                let valorResultado = 0;
+                switch(tipoFigura){
+                    case '1': valorResultado = valorDato * valorDato / 2;
+                        break;
+                    case '2': valorResultado = valorDato * valorDato;
+                        break;
+                    case '3': valorResultado = Math.PI * Math.pow(valorDato,2);
+                        break;
+                    default:
+                        valorResultado = "~~~ Inválido ~~~"
+                }
+                console.log(' > Valor resultado: ' + valorResultado);
+                document.getElementById("valorResultado").value = valorResultado;
+            }
+        </script>
+    </body>
+</html>
